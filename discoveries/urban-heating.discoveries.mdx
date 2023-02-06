@@ -1,0 +1,106 @@
+---
+id: urban-heating
+name: Implications for Heat Stress
+description: "Urban Growth of Houston, Texas over the Last Two Decades: Implications for Heat Stress"
+media:
+  src: ::file ./agriculture-food-security-east-africa-cover.jpg
+  alt: Lone tree in a field in Kenya
+  author:
+    name: AUTHOR NAME
+    url: https://unsplash.com/photos/T-LfvX-7IVg
+pubDate: 2023-02-06
+thematics:
+  - environmental-justice
+---
+
+<Block>
+  <Prose>
+Heat stress is a natural hazard that causes a large number of fatalities globally. In the coming decades, climate change is expected to exacerbate heat stress due to the more frequent occurrence of heat waves. Further, future urban growth and related changes in the urban heat island effect are also expected to increase the severity of heat stress. Given this scenario, urban populations may be disproportionately affected by heat stress and adverse health impacts in the future decades.
+
+
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+Within urban regions, a variety of factors cause residents to be subject to unequal exposure to heat stress and heat impacts (Reckien et al. 2018). These include both person-specific factors such as age, sex and pre-existing medical conditions and other factors such as socio-economic status, environment, and location-dependent aspects. Social structures and segregation in urban regions lead to combinations of these factors in a manner that leads to inequalities in exposure to heat stress. This discovery is about the use of NASA Earth observations to explore how some of the factors affect heat stress inequalities in the city of Houston as it grew over the last two decades.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Prose>
+Houston is the site of some of the earliest studies of environmental inequality; in the late 1970s Robert Bullard, considered the “father of environmental justice,” began to study the disproportionate siting of waste facilities in predominantly poor and minority neighborhoods (Bullard 1983). Decades later, the study of inequalities in exposure to environmental hazards remains especially relevant for Houston, which is among the most racially segregated cities in the United States (Logan et al. 2013). Furthermore, Houston was recently ranked as the most economically segregated metropolitan area in the entire country, with 24% of high-income households living in high-income neighborhoods and 37% of low-income households residing in low-income neighborhoods (Fry and Taylor 2012).
+  </Prose>
+</Block>
+
+
+
+<Block>
+  <Prose>
+This discovery used the following sources of data for studying urban growth impacts of Houston: 1) two decades of land surface temperature (LST) and Normalized Difference Vegetation Index (NDVI) derived from NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor observations from the Terra platform. Note that NDVI is a proxy for green vegetation, with 0 and 1 indicating bare ground and dense green vegetation cover; 2) the National Land Cover Database (NLCD) which provides land cover classification over the US at 30m spatial resolution and ~3-year intervals for the last two decades and; 3) the Center for Disease Control (CDC)/Agency for Toxic Substances and Disease Registry (ATSDR) social vulnerability index (SVI), which includes poverty categorization for census tracts.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+Using the NLCD, we were able to quantify the growth of urban and built-up land cover during the last two decades. We found that the area of urban and built-up land cover increased by more than 20% during this period. Comparison of NLCD spatial maps of land cover for the years 2001 and 2019 show a substantial increase in urban land cover along the southwestern part of the city of Houston (Figure 1, can use a slider view). We also constructed corresponding decade-level (i.e., decadal) averages of land surface temperature (LST) for the periods 2000-2009 and 2010-2019 (Figure 2, can use slider view). Spatial patterns of decadal averages of daytime LST show an increase in LST over contiguous regions in the southwestern part of the city (increases of up to 3K). These regions of LST increase coincide with the area over which NLDC spatial maps show substantial urban development by 2019. The region of unexpected LST also persists during nighttime, although at a lower intensity. LST is not a direct measure of air temperature but like an indication of how hot the pavement is under your feet. However, increases in LST are generally associated with increases in air temperature and heat stress.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+We utilized ATSDR SVI to categorize changes in decadal average LST and NDVI as a function of poverty. Our analysis shows that economically disadvantaged populations are subject to higher exposure to urban-enhanced heat stress and, potentially, less access to green spaces. Specifically according to 2020 data, areas in Harris county with poverty levels 10 percent or higher have on average an LST 22°F (12.23°C) hotter than areas where the poverty level is below 10 percent [F(4, 27.5) = 11.1, p < .001]. In contrast to this large average difference between high poverty areas and low poverty areas, there is little average variance between areas that have similar levels of poverty. Between higher poverty areas, the average LST differs by only 0.13°F (0.7°C). Between lower poverty areas, the average LST differs by a mere 0.04°F (0.02°C).
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+As with LST, an analysis of 2020 NDVI data (measuring vegetation coverage such as trees and grass) showed a significant difference based on levels of poverty [F(4, 27.5) = 4.57, p = .006]. For example, areas with the lowest poverty levels (< 5 percent) have approximately 6% more vegetation coverage than areas with the highest poverty levels (20+ percent). This difference may seem small, but even small increases or decreases in NDVI can affect the levels of heat experienced by residents.
+  </Prose>
+</Block>
+
+<Block>
+  <Figure>
+    <Image src="" />
+    <Caption> caption </Caption>
+  </Figure>
+</Block>
+
+
+<Block>
+  <Figure>
+    <Image     
+      src="http://via.placeholder.com/256x128?text=align-left" 
+    alt="Land cover map"
+    />
+  </Figure>
+  <Prose>
+    Figure 1. a) Land cover map for the year 2001. Urban and built up land cover is shown in light green color; b) Same as panel (a), except for the year 2019. Note that this figure is made using MODIS land cover data and will be replaced by the NLCD equivalent. The black outline is Harris county, most of which is occupied by the city of Houston.
+  </Prose>
+</Block>
+
+
+<Block>
+  <Figure>
+    <Image     
+      src={new URL('./HOUS_LST.jpg', import.meta.url).href}
+      alt='LST average map'
+   />
+    <Caption> ... </Caption>
+  </Figure>
+  <Prose>
+    Figure 2. a) Daytime LST average for 2000-2009; b) Daytime LST average for 2010-2019; c) Nighttime LST average for 2000-2009; d) Nighttime LST average for 2010-2019. The black outline is Harris county, most of which is occupied by the city of Houston.
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+     
+Bullard, R. D., 1983: Solid Waste Sites and the Black Houston Community*. Sociol. Inq., 53, 273–288, https://doi.org/10.1111/j.1475-682X.1983.tb00037.x.
+Fry, R., and P. Taylor, 2012: The Rise of Residential Segregation by Income. Pew Research Center, 25 pp.
+Logan, J. R., C. Fischer, and C. Buchmann, 2013: US2010: Discovery America in a New Century. 1–62. http://www.s4.brown.edu/us2010/Data/data.htm.
+Reckien, D., and Coauthors, 2018: Equity, environmental justice, and urban climate change.
+
+</Prose>
+</Block>
