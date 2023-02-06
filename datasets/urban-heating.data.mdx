@@ -1,0 +1,117 @@
+---
+featuredOn: []
+id: urban-heating
+name: Urban Heating Dataset
+description: Description for Urban Heating Dataset
+thematics:
+  - environmental-justice
+media:
+  src: ::file ./svi-housing--dataset-cover.png
+  alt: Alt Text for dataset
+  author:
+    name: NASA
+    url: null
+layers:
+  - sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: blues
+      rescale:
+        - 0
+        - 1
+    compare:
+      datasetId: svi-housing
+      layerId: social-vulnerability-index-housing
+      mapLabel: >
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    name: Housing Type and Transportation Score
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+        - "#f7fbff"
+        - "#d0e1f2"
+        - "#94c4df"
+        - "#4a98c9"
+        - "#1764ab"
+        - "#08306b"
+    type: raster
+    id: social-vulnerability-index-housing
+    datetime: |
+      ::js ({ datetime, dateFns }) => {
+        return dateFns.sub(datetime, { years: 2 });
+      }
+    description: Housing Type & Transportation (Multi-Unit Structures, Mobile Homes,
+      Crowding, No Vehicle, Group Quarters) - Percentile ranking
+    stacCol: social-vulnerability-index-housing
+    zoomExtent:
+      - 2
+      - 16
+  - sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: blues
+      rescale:
+        - 0
+        - 1
+    compare:
+      datasetId: svi-housing
+      layerId: social-vulnerability-index-housing-nopop
+      mapLabel: >
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+    name: Housing Type and Transportation Score - Masked for No Population
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+        - "#f7fbff"
+        - "#d0e1f2"
+        - "#94c4df"
+        - "#4a98c9"
+        - "#1764ab"
+        - "#08306b"
+    type: raster
+    id: social-vulnerability-index-housing-nopop
+    description: Housing Type & Transportation (Multi-Unit Structures, Mobile Homes,
+      Crowding, No Vehicle, Group Quarters) - Percentile ranking masked for
+      regions with no population
+    stacCol: social-vulnerability-index-housing-nopop
+    zoomExtent:
+      - 2
+      - 16
+---
+<Block>
+<Prose>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut nisl nec quam dignissim vestibulum vitae sit amet augue. Vestibulum a diam vitae nisl interdum auctor eget vitae tortor. Nam a velit pretium neque consequat congue vitae sit amet ligula. Suspendisse potenti. Nunc ullamcorper neque et imperdiet hendrerit. Donec volutpat congue placerat. Nam feugiat pretium eleifend. Curabitur semper arcu augue, ut facilisis ipsum hendrerit nec. Sed semper elit ac eros eleifend suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate ligula vitae tincidunt lacinia. Pellentesque finibus ante in nunc auctor ornare.
+</Prose>
+</Block>
+
+<Block type='full'>
+<Figure>
+  <Map
+    datasetId='svi-housing'
+    layerId='social-vulnerability-index-housing'
+    dateTime='2016-01-01'
+    zoom={9}
+    center={\[-75.32,39.98]}
+    compareDateTime='2018-01-01'
+  />
+  <Caption
+    attrAuthor='NASA'
+    attrUrl='https://nasa.gov/'
+  >
+    Comparison of the housing and transportation score for Philadelphia, PA between 2016 and 2018. For this color scale, 0 corresponds to least vulnerable and 1 is most vulnerable.
+  </Caption>
+</Figure>
+<Prose>
+## Lorem ipsum dolor sit amet
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut nisl nec quam dignissim vestibulum vitae sit amet augue. Vestibulum a diam vitae nisl interdum auctor eget vitae tortor. Nam a velit pretium neque consequat congue vitae sit amet ligula. Suspendisse potenti. Nunc ullamcorper neque et imperdiet hendrerit. Donec volutpat congue placerat. Nam feugiat pretium eleifend. Curabitur semper arcu augue, ut facilisis ipsum hendrerit nec. Sed semper elit ac eros eleifend suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate ligula vitae tincidunt lacinia. Pellentesque finibus ante in nunc auctor ornare.
+</Prose>
+</Block>
