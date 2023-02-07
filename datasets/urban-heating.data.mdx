@@ -19,14 +19,7 @@ layers:
       rescale:
         - 0
         - 1
-    compare:
-      datasetId: svi-housing
-      layerId: social-vulnerability-index-housing
-      mapLabel: >
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
-    name: Housing Type and Transportation Score
+    name: Houston NDVI
     legend:
       type: gradient
       min: "0"
@@ -39,17 +32,19 @@ layers:
         - "#1764ab"
         - "#08306b"
     type: raster
-    id: social-vulnerability-index-housing
-    datetime: |
-      ::js ({ datetime, dateFns }) => {
-        return dateFns.sub(datetime, { years: 2 });
-      }
-    description: Housing Type & Transportation (Multi-Unit Structures, Mobile Homes,
-      Crowding, No Vehicle, Group Quarters) - Percentile ranking
-    stacCol: social-vulnerability-index-housing
+    id: houston-ndvi
+    description: Houston NDVI
+    stacCol: houston-ndvi
     zoomExtent:
       - 2
       - 16
+    compare:
+      datasetId: urban-heating
+      layerId: houston-ndvi
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
   - sourceParams:
       resampling: bilinear
       bidx: 1
@@ -57,14 +52,7 @@ layers:
       rescale:
         - 0
         - 1
-    compare:
-      datasetId: svi-housing
-      layerId: social-vulnerability-index-housing-nopop
-      mapLabel: >
-        ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
-    name: Housing Type and Transportation Score - Masked for No Population
+    name: Houston LST Night
     legend:
       type: gradient
       min: "0"
@@ -77,14 +65,85 @@ layers:
         - "#1764ab"
         - "#08306b"
     type: raster
-    id: social-vulnerability-index-housing-nopop
-    description: Housing Type & Transportation (Multi-Unit Structures, Mobile Homes,
-      Crowding, No Vehicle, Group Quarters) - Percentile ranking masked for
-      regions with no population
-    stacCol: social-vulnerability-index-housing-nopop
+    id: houston-lst-night
+    description: Houston lst night 
+    stacCol: houston-lst-night
     zoomExtent:
       - 2
       - 16
+    compare:
+      datasetId: urban-heating
+      layerId: houston-lst-night
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+  - sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: blues
+      rescale:
+        - 0
+        - 1
+    name: Houston LST Day
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+        - "#f7fbff"
+        - "#d0e1f2"
+        - "#94c4df"
+        - "#4a98c9"
+        - "#1764ab"
+        - "#08306b"
+    type: raster
+    id: houston-lst-day
+    description: Houston lst day light
+    stacCol: houston-lst-day
+    zoomExtent:
+      - 2
+      - 16
+    compare:
+      datasetId: urban-heating
+      layerId: houston-lst-day
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
+  - sourceParams:
+      resampling: bilinear
+      bidx: 1
+      colormap_name: blues
+      rescale:
+        - 0
+        - 1
+    name: Houston Landcover
+    legend:
+      type: gradient
+      min: "0"
+      max: "1"
+      stops:
+        - "#f7fbff"
+        - "#d0e1f2"
+        - "#94c4df"
+        - "#4a98c9"
+        - "#1764ab"
+        - "#08306b"
+    type: raster
+    id: houston-landcover
+    description: Houston Landcover
+    stacCol: houston-landcover
+    zoomExtent:
+      - 2
+      - 16
+    compare:
+      datasetId: urban-heating
+      layerId: houston-landcover
+      mapLabel: |
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
 ---
 <Block>
 <Prose>
