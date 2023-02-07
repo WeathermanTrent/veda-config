@@ -30,16 +30,29 @@ thematics:
 </Prose>
 </Block>
 
-<Block>
-<Prose>
-  ## Using satellite data to study urban heat
-We can use satellite data to get a complete picture of urban heat in this large city. Combined with socioeconomic information, there is a lot to learn about the impacts of urban growth on urban heat. To understand how the city is changing over time we used data about land cover. This information comes from the National Land Cover Database (NLCD), which classifies land cover types in areas as small as 30m x 30m every 3 years. Greenspace also plays a big role in urban heat. To measure vegetation, such as trees and grass, we use a metric called the Normalized Difference Vegetation Index (NDVI). On this scale, bare ground = 0 and dense vegetation = 1. This information comes from the NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor on the Terra platform.
 
-To study urban heat, we used land surface temperature (LST) data, also from Terra MODIS. LST does not measure air temperature, but instead measures how hot the pavement is under your feet. Increases in LST are generally associated with increases in air temperature and heat stress.
+<Block type="full">
+  <Figure>
+    <Image   
+      src={new URL('./HOUS_LST.jpg', import.meta.url).href}
+      alt='LST average map'
+   />
+    <Caption>     
+      a) Daytime LST average for 2000-2009; b) Daytime LST average for 2010-2019; c) Nighttime LST average for 2000-2009; d) Nighttime LST average for 2010-2019. The black outline is Harris county, most of which is occupied by the city of Houston. 
+    </Caption>
+  </Figure>
 
-All this Earth science information is useful for understanding the geography of heat. To understand the impact on humans, we need human information. That comes from the Center for Disease Control (CDC) Agency for Toxic Substances and Disease Registry (ATSDR). The Social Vulnerability Index (SVI) quantifies poverty within each census tract.
-</Prose>
+  <Prose>
+    ## Using satellite data to study urban heat
+
+    We can use satellite data to get a complete picture of urban heat in this large city. Combined with socioeconomic information, there is a lot to learn about the impacts of urban growth on urban heat. To understand how the city is changing over time we used data about land cover. This information comes from the National Land Cover Database (NLCD), which classifies land cover types in areas as small as 30m x 30m every 3 years. Greenspace also plays a big role in urban heat. To measure vegetation, such as trees and grass, we use a metric called the Normalized Difference Vegetation Index (NDVI). On this scale, bare ground = 0 and dense vegetation = 1. This information comes from the NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor on the Terra platform.
+  
+    To study urban heat, we used land surface temperature (LST) data, also from Terra MODIS. LST does not measure air temperature, but instead measures how hot the pavement is under your feet. Increases in LST are generally associated with increases in air temperature and heat stress.
+
+    All this Earth science information is useful for understanding the geography of heat. To understand the impact on humans, we need human information. That comes from the Center for Disease Control (CDC) Agency for Toxic Substances and Disease Registry (ATSDR). The Social Vulnerability Index (SVI) quantifies poverty within each census tract.
+  </Prose>
 </Block>
+
 
 <Block>
   <Prose>
@@ -66,8 +79,8 @@ All this Earth science information is useful for understanding the geography of 
     <Map
       datasetId='urban-heating'
       layerId='houston-lst-day'
-      dateTime='2019-01-01'
-      compareDateTime='2019-01-01'
+      dateTime='2010-01-01'
+      compareDateTime='2010-01-01'
     />
     <Caption>
       We utilized ATSDR SVI to categorize changes in decadal average LST and NDVI as a function of poverty. Our analysis shows that economically disadvantaged populations are subject to higher exposure to urban-enhanced heat stress and, potentially, less access to green spaces.
@@ -77,27 +90,6 @@ All this Earth science information is useful for understanding the geography of 
     Finally, we combined the socioeconomic information with these changes in heat and land cover. Our analysis shows that economically disadvantaged populations are subject to great heat stress. At the same time, they may also face decreased access to green spaces. In 2020, areas in Harris county with poverty levels >10% are 22°F (12.23°C) hotter than areas where the poverty level is < 10% [F(4, 27.5) = 11.1, p < .001]. Areas with similar levels of poverty experience similar levels of heat stress. This disparity stands out in sharp contrast to the large temperature difference between high and low poverty areas. Between higher poverty areas, the average LST differs by only 0.13°F (0.7°C). Between lower poverty areas, the average LST differs by a mere 0.04°F (0.02°C).
 
     As with temperature, an analysis of 2020 vegetation data showed a significant difference based on levels of poverty [F(4, 27.5) = 4.57, p = .006]. Areas with the lowest poverty levels (< 5%) have approximately 6% more vegetation than areas with the highest poverty levels (>20%). Even small increases or decreases in vegetation can affect how residents experience heat.
-  </Prose>
-</Block>
-
-<Block> 
-  <Prose>
-  For more information about how to access and use NASA data to study Extreme Heat please visit our Data Pathfinders: LINK
-
-  For more information about additional datasets that can be used to study Extreme Heat and Environmental Justice please visit the new EJ Data Catalog: https://www.earthdata.nasa.gov/learn/environmental-justice-data-catalog 
-  </Prose>
-</Block>
-
-<Block>
-  <Figure>
-    <Image     
-      src={new URL('./HOUS_LST.jpg', import.meta.url).href}
-      alt='LST average map'
-   />
-    <Caption> ... </Caption>
-  </Figure>
-  <Prose>
-    a) Daytime LST average for 2000-2009; b) Daytime LST average for 2010-2019; c) Nighttime LST average for 2000-2009; d) Nighttime LST average for 2010-2019. The black outline is Harris county, most of which is occupied by the city of Houston.
   </Prose>
 </Block>
 
@@ -120,8 +112,6 @@ All this Earth science information is useful for understanding the geography of 
   </Figure>
 </Block>
 
-
-
 <Block>
 
   <Figure>
@@ -138,6 +128,14 @@ All this Earth science information is useful for understanding the geography of 
     <Prose>
     ### NDVI Time series
     Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2019)
+  </Prose>
+</Block>
+
+<Block> 
+  <Prose>
+  For more information about how to access and use NASA data to study Extreme Heat please visit our Data Pathfinders: https://www.earthdata.nasa.gov/learn/pathfinders/disasters/extreme-heat-data-pathfinder 
+
+  For more information about additional datasets that can be used to study Extreme Heat and Environmental Justice please visit the new EJ Data Catalog: https://www.earthdata.nasa.gov/learn/environmental-justice-data-catalog 
   </Prose>
 </Block>
 
