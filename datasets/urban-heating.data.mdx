@@ -15,22 +15,28 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap_name: ylgn
       rescale:
         - -2000
         - 8500
     name: Houston NDVI
     legend:
       type: gradient
-      min: -2000
-      max: 8500
+      min: 0
+      max: 1
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - '#ffffe5'
+        - '#f9fdc5'
+        - '#e9f7af'
+        - '#d1ed9f'
+        - '#b1df90'
+        - '#8bce81'
+        - '#64bc6f'
+        - '#3ea75b'
+        - '#288b48'
+        - '#10753c'
+        - '#005e33'
+        - '#004529'
     type: raster
     id: houston-ndvi
     description: Houston NDVI
@@ -48,22 +54,28 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap_name: jet
       rescale:
         - 14300
         - 14830
     name: Houston LST Night
     legend:
       type: gradient
-      min: "14300"
-      max: "14830"
+      min: "low temp"
+      max: "high temp"
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - '#000080'
+        - '#0000e9'
+        - '#003aff'
+        - '#0097ff'
+        - '#0bf3ec'
+        - '#56ffa1'
+        - '#a1ff56'
+        - '#ecff0b'
+        - '#ffad00'
+        - '#ff5700'
+        - '#e90100'
+        - '#800000'
     type: raster
     id: houston-lst-night
     description: Houston lst night 
@@ -81,22 +93,28 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap_name: jet
       rescale:
         - 14600
         - 15300
     name: Houston LST Day
     legend:
       type: gradient
-      min: 14600
-      max: 15300
+      min: "low temp"
+      max: "high temp"
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - '#000080'
+        - '#0000e9'
+        - '#003aff'
+        - '#0097ff'
+        - '#0bf3ec'
+        - '#56ffa1'
+        - '#a1ff56'
+        - '#ecff0b'
+        - '#ffad00'
+        - '#ff5700'
+        - '#e90100'
+        - '#800000'
     type: raster
     id: houston-lst-day
     description: Houston lst day light
