@@ -1,13 +1,13 @@
 ---
 id: urban-heating
 name: Implications for Heat Stress
-description: "Urban Growth of Houston, Texas over the Last Two Decades: Implications for Heat Stress"
+description: "Urban Growth of Houston, Texas over the Last Two Decades"
 media:
-  src: ::file ./agriculture-food-security-east-africa-cover.jpg
-  alt: Lone tree in a field in Kenya
+  src: ::file ./urban-heat.jpeg
+  alt: Sunset over Tokyo
   author:
-    name: AUTHOR NAME
-    url: https://unsplash.com/photos/T-LfvX-7IVg
+    name: Arto Marttinen
+    url: https://unsplash.com/photos/6xh7H5tWj9c
 pubDate: 2023-02-06
 thematics:
   - environmental-justice
@@ -85,6 +85,43 @@ As with LST, an analysis of 2020 NDVI data (measuring vegetation coverage such a
   <Prose>
     Figure 2. a) Daytime LST average for 2000-2009; b) Daytime LST average for 2010-2019; c) Nighttime LST average for 2000-2009; d) Nighttime LST average for 2010-2019. The black outline is Harris county, most of which is occupied by the city of Houston.
   </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    ## LST Time series
+    Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2019)
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./harris-lst-svi-2019.csv', import.meta.url).href}
+      dateFormat="%b-%Y"
+      idKey='SVI %'
+      xKey='2019 Months'
+      yKey='LST'
+      yAxisLabel='K'
+    />
+    <Caption
+    />
+  </Figure>
+</Block>
+
+<Block>
+  <Prose>
+    ## NDVI Time series
+    Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2019)
+  </Prose>
+  <Figure>
+    <Chart
+      dataPath={new URL('./harris-ndvi-svi-2019.csv', import.meta.url).href}
+      dateFormat="%Y-%M-%D"
+      idKey='SVI %'
+      xKey='Date'
+      yKey='NDVI'
+    />
+    <Caption
+    />
+  </Figure>
 </Block>
 
 <Block>
