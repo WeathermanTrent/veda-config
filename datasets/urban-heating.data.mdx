@@ -106,7 +106,7 @@ layers:
       - 16
     compare:
       datasetId: urban-heating
-      layerId: houston-lst-day
+      layerId: houston-ndvi
       mapLabel: |
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
@@ -128,10 +128,10 @@ layers:
       min: "0"
       max: "255"
       stops:
-        - color: "#486DA2"
-          label: "Open Water"
-        - color: "#E7EFFC"
-          label: "Perennial Ice/Snow"
+        # - color: "#486DA2"
+        #   label: "Open Water"
+        # - color: "#E7EFFC"
+        #   label: "Perennial Ice/Snow"
         - color: "#E1CDCE"
           label: "Developed, Open Space"
         - color: "#DC9881"
@@ -140,16 +140,16 @@ layers:
           label: "Developed, Medium Intensity"
         - color: "#AB0101"
           label: "Developed High Intensity"
-        - color: "#B3AFA4"
-          label: "Barren Land (Rock/Sand/Clay)"
+        # - color: "#B3AFA4"
+        #   label: "Barren Land (Rock/Sand/Clay)"
         - color: "#6BA966"
           label: "Deciduous Forest"
         - color: "#1D6533"
           label: "Evergreen Forest"
         - color: "#BDCC93"
           label: "Mixed Forest"
-        - color: "#B29C46"
-          label: "Dwarf Scrub"
+        # - color: "#B29C46"
+        #   label: "Dwarf Scrub"
         - color: "#D1BB82"
           label: "Shrub/Scrub"
         - color: "#EDECCD"
@@ -158,16 +158,16 @@ layers:
           label: "Sedge/Herbaceous"
         - color: "#A4CC51"
           label: "Lichens"
-        - color: "#82BA9D"
-          label: "Moss"
-        - color: "#DDD83E"
-          label: "Pasture/Hay"
+        # - color: "#82BA9D"
+        #   label: "Moss"
+        # - color: "#DDD83E"
+        #   label: "Pasture/Hay"
         - color: "#AE7229"
           label: "Cultivated Crops"
-        - color: "#BBD7ED"
-          label: "Woody Wetlands"
-        - color: "#71A4C1"
-          label: "Emergent Herbaceous Wetlands"
+        # - color: "#BBD7ED"
+        #   label: "Woody Wetlands"
+        # - color: "#71A4C1"
+        #   label: "Emergent Herbaceous Wetlands"
     type: raster
     id: houston-landcover
     description: Houston Landcover
