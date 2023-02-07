@@ -15,30 +15,49 @@ thematics:
 
 <Block>
   <Prose>
-Heat stress is a natural hazard that causes a large number of fatalities globally. In the coming decades, climate change is expected to exacerbate heat stress due to the more frequent occurrence of heat waves. Further, future urban growth and related changes in the urban heat island effect are also expected to increase the severity of heat stress. Given this scenario, urban populations may be disproportionately affected by heat stress and adverse health impacts in the future decades.
-
-
+Heat stress is a natural hazard that causes a large number of fatalities globally. In the coming decades, climate change may cause more frequent heat waves, which could exacerbate heat stress. Future urban growth could also strengthen the urban heat island effect, causing more severe heat stress. Urban populations may face greater health impacts due to heat stress.
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-Within urban regions, a variety of factors cause residents to be subject to unequal exposure to heat stress and heat impacts (Reckien et al. 2018). These include both person-specific factors such as age, sex and pre-existing medical conditions and other factors such as socio-economic status, environment, and location-dependent aspects. Social structures and segregation in urban regions lead to combinations of these factors in a manner that leads to inequalities in exposure to heat stress. This discovery is about the use of NASA Earth observations to explore how some of the factors affect heat stress inequalities in the city of Houston as it grew over the last two decades.
+In urban areas, a variety of individual, social, and geographic factors determine an individual's heat risk (Reckien et al. 2018). Social structures and segregation in urban areas can exacerbate risk, leading to unequal heat exposure. This scenario is playing out in Houston, Texas. In this discovery, we'll use NASA Earth observations to explore heat stress inequalities in Houston over the past 20 years.
   </Prose>
 </Block>
 
+<Block>
+<Prose>
+Houston is the site of some of the earliest studies of environmental inequality. Robert Bullard, known as the “father of environmental justice,”  proved that waste facilities were disproportionately sited in poor and minority neighborhoods as far back as the late 1970s (Bullard 1983). Today, this kind of research is still important in Houston, which is among the most racially segregated cities in the United States (Logan et al. 2013). In 2012, Houston was ranked the most economically segregated metropolitan area in the entire country (Fry and Taylor 2012). According to this study, 24% of high-income households live in high-income neighborhoods and 37% of low-income households reside in low-income neighborhoods (Fry and Taylor 2012).
+</Prose>
+</Block>
+
+
+
+<Block>
+<Prose>
+We can use satellite data to get a complete picture of urban heat in this large city. Combined with socioeconomic information, there is a lot to learn about the impacts of urban growth on urban heat. To understand how the city is changing over time we used data about land cover. This information comes from the National Land Cover Database (NLCD), which classifies land cover types in areas as small as 30m x 30m every 3 years. Greenspace also plays a big role in urban heat. To measure vegetation, such as trees and grass, we use a metric called the Normalized Difference Vegetation Index (NDVI). On this scale, bare ground = 0 and dense vegetation = 1. This information comes from the NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor on the Terra platform.
+</Prose>
+</Block>
+
+
+
+<Block>
+<Prose>
+To study urban heat, we used land surface temperature (LST) data, also from Terra MODIS. LST does not measure air temperature, but instead measures how hot the pavement is under your feet. Increases in LST are generally associated with increases in air temperature and heat stress.
+</Prose>
+</Block>
+
+
+
+<Block>
+<Prose>
+All this Earth science information is useful for understanding the geography of heat. To understand the impact on humans, we need human information. That comes from the Center for Disease Control (CDC) Agency for Toxic Substances and Disease Registry (ATSDR). The Social Vulnerability Index (SVI) quantifies poverty within each census tract.
+</Prose>
+</Block>
 
 <Block>
   <Prose>
 Houston is the site of some of the earliest studies of environmental inequality; in the late 1970s Robert Bullard, considered the “father of environmental justice,” began to study the disproportionate siting of waste facilities in predominantly poor and minority neighborhoods (Bullard 1983). Decades later, the study of inequalities in exposure to environmental hazards remains especially relevant for Houston, which is among the most racially segregated cities in the United States (Logan et al. 2013). Furthermore, Houston was recently ranked as the most economically segregated metropolitan area in the entire country, with 24% of high-income households living in high-income neighborhoods and 37% of low-income households residing in low-income neighborhoods (Fry and Taylor 2012).
-  </Prose>
-</Block>
-
-
-
-<Block>
-  <Prose>
-This discovery used the following sources of data for studying urban growth impacts of Houston: 1) two decades of land surface temperature (LST) and Normalized Difference Vegetation Index (NDVI) derived from NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor observations from the Terra platform. Note that NDVI is a proxy for green vegetation, with 0 and 1 indicating bare ground and dense green vegetation cover; 2) the National Land Cover Database (NLCD) which provides land cover classification over the US at 30m spatial resolution and ~3-year intervals for the last two decades and; 3) the Center for Disease Control (CDC)/Agency for Toxic Substances and Disease Registry (ATSDR) social vulnerability index (SVI), which includes poverty categorization for census tracts.
   </Prose>
 </Block>
 
@@ -59,7 +78,7 @@ This discovery used the following sources of data for studying urban growth impa
 
 <Block>
   <Prose>
-Using the NLCD, we were able to quantify the growth of urban and built-up land cover during the last two decades. We found that the area of urban and built-up land cover increased by more than 20% during this period. Comparison of NLCD spatial maps of land cover for the years 2001 and 2019 show a substantial increase in urban land cover along the southwestern part of the city of Houston (Figure 1, can use a slider view). We also constructed corresponding decade-level (i.e., decadal) averages of land surface temperature (LST) for the periods 2000-2009 and 2010-2019 (Figure 2, can use slider view). Spatial patterns of decadal averages of daytime LST show an increase in LST over contiguous regions in the southwestern part of the city (increases of up to 3K). These regions of LST increase coincide with the area over which NLDC spatial maps show substantial urban development by 2019. The region of unexpected LST also persists during nighttime, although at a lower intensity. LST is not a direct measure of air temperature but like an indication of how hot the pavement is under your feet. However, increases in LST are generally associated with increases in air temperature and heat stress.
+    Using land cover maps, we were able to measure the increase of urban and built-up land cover. We found that the area of urban and built-up land cover increased by more than 20% in the last two decades. By comparing land cover maps from 2001 and 2019, we can see a substantial increase in urban areas along the southwestern part of the city (Figure 1 - slide to compare years). We can do a similar comparison with average temperature. Figure 2 shows average temperature from 2000-2009 compared to 2010-2019. The maps show higher average temperatures over similar regions in the southwestern part of the city. These higher temperatures carry into the night, too, although they are less intense.
   </Prose>
 </Block>
 
@@ -80,13 +99,26 @@ Using the NLCD, we were able to quantify the growth of urban and built-up land c
 
 <Block>
   <Prose>
-We utilized ATSDR SVI to categorize changes in decadal average LST and NDVI as a function of poverty. Our analysis shows that economically disadvantaged populations are subject to higher exposure to urban-enhanced heat stress and, potentially, less access to green spaces. Specifically according to 2020 data, areas in Harris county with poverty levels 10 percent or higher have on average an LST 22°F (12.23°C) hotter than areas where the poverty level is below 10 percent [F(4, 27.5) = 11.1, p < .001]. In contrast to this large average difference between high poverty areas and low poverty areas, there is little average variance between areas that have similar levels of poverty. Between higher poverty areas, the average LST differs by only 0.13°F (0.7°C). Between lower poverty areas, the average LST differs by a mere 0.04°F (0.02°C).
+    Finally, we combined the socioeconomic information with these changes in heat and land cover. Our analysis shows that economically disadvantaged populations are subject to great heat stress. At the same time, they may also face decreased access to green spaces. In 2020, areas in Harris county with poverty levels >10% are 22°F (12.23°C) hotter than areas where the poverty level is <10% [F(4, 27.5) = 11.1, p < .001]. Areas with similar levels of poverty experience similar levels of heat stress. This disparity stands out in sharp contrast to the large temperature difference between high and low poverty areas. Between higher poverty areas, the average LST differs by only 0.13°F (0.7°C). Between lower poverty areas, the average LST differs by a mere 0.04°F (0.02°C).
   </Prose>
 </Block>
 
 <Block>
   <Prose>
-As with LST, an analysis of 2020 NDVI data (measuring vegetation coverage such as trees and grass) showed a significant difference based on levels of poverty [F(4, 27.5) = 4.57, p = .006]. For example, areas with the lowest poverty levels (< 5 percent) have approximately 6% more vegetation coverage than areas with the highest poverty levels (20+ percent). This difference may seem small, but even small increases or decreases in NDVI can affect the levels of heat experienced by residents.
+    
+  </Prose>
+</Block>
+
+<Block>
+  <Prose>
+    As with temperature, an analysis of 2020 vegetation data showed a significant difference based on levels of poverty [F(4, 27.5) = 4.57, p = .006]. Areas with the lowest poverty levels (< 5%) have approximately 6% more vegetation than areas with the highest poverty levels (>20%). Even small increases or decreases in vegetation can affect how residents experience heat.
+  </Prose>
+</Block>
+<Block> 
+  <Prose>
+  For more information about how to access and use NASA data to study Extreme Heat please visit our Data Pathfinders: LINK
+
+  For more information about additional datasets that can be used to study Extreme Heat and Environmental Justice please visit the new EJ Data Catalog: https://www.earthdata.nasa.gov/learn/environmental-justice-data-catalog 
   </Prose>
 </Block>
 
