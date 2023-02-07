@@ -3,8 +3,8 @@ featuredOn: []
 id: urban-heating
 name: Urban Heating Dataset
 description: Description for Urban Heating Dataset test
-thematics:
-  - environmental-justice
+# thematics:
+#   - environmental-justice
 media:
   src: ::file ./urban-heat.jpeg
   alt: Sunset over Tokyo
@@ -86,17 +86,17 @@ layers:
         - 14600
         - 15300
     name: Houston LST Day
-    legend:
-      type: gradient
-      min: "lower"
-      max: "higher"
-      stops:
-        - '#000080' 
-        - '#004cff' 
-        - '#29ffce'
-        - '#ceff29'
-        - '#ff6800'
-        - '#800000'
+    # legend:
+    #   type: gradient
+    #   min: "lower"
+    #   max: "higher"
+    #   stops:
+    #     - '#000080' 
+    #     - '#004cff' 
+    #     - '#29ffce'
+    #     - '#ceff29'
+    #     - '#ff6800'
+    #     - '#800000'
     type: raster
     id: houston-lst-day
     description: "The Land Surface Temperature (LST) data is MODIS-derived daily data, measured at 1 km spatial resolution." 
@@ -133,37 +133,39 @@ layers:
         # - color: "#E7EFFC"
         #   label: "Perennial Ice/Snow"
         - color: "#E1CDCE"
-          label: "Developed, Open Space"
+          label: "Urban"
         - color: "#DC9881"
-          label: "Developed, Low Intensity"
+        #   label: "Developed, Low Intensity"
         - color: "#F10100"
-          label: "Developed, Medium Intensity"
+        #   label: "Developed, Medium Intensity"
         - color: "#AB0101"
-          label: "Developed High Intensity"
+        #   label: "Developed High Intensity"
         # - color: "#B3AFA4"
         #   label: "Barren Land (Rock/Sand/Clay)"
         - color: "#6BA966"
-          label: "Deciduous Forest"
+          label: "Vegetation"
+        #   label: "Deciduous Forest"
         - color: "#1D6533"
-          label: "Evergreen Forest"
+        #   label: "Evergreen Forest"
         - color: "#BDCC93"
-          label: "Mixed Forest"
+        #   label: "Mixed Forest"
         # - color: "#B29C46"
         #   label: "Dwarf Scrub"
         - color: "#D1BB82"
-          label: "Shrub/Scrub"
+        #   label: "Shrub/Scrub"
         - color: "#EDECCD"
-          label : "Grassland/Herbaceous"
+        #   label : "Grassland/Herbaceous"
         - color: "#D0D181"
-          label: "Sedge/Herbaceous"
+        #   label: "Sedge/Herbaceous"
         - color: "#A4CC51"
-          label: "Lichens"
+        #   label: "Lichens"
         # - color: "#82BA9D"
         #   label: "Moss"
         # - color: "#DDD83E"
         #   label: "Pasture/Hay"
         - color: "#AE7229"
-          label: "Cultivated Crops"
+        #   label: "Cultivated Crops"
+          label: "Agriculture"
         # - color: "#BBD7ED"
         #   label: "Woody Wetlands"
         # - color: "#71A4C1"
