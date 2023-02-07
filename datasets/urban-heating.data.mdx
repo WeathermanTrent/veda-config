@@ -15,22 +15,22 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap_name: ylgn
       rescale:
         - -2000
         - 8500
     name: Houston NDVI
     legend:
       type: gradient
-      min: -2000
-      max: 8500
+      min: "-2000"
+      max: "8500"
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - '#ffffe5'
+        - '#e5f5ac'
+        - '#a2d88a'
+        - '#4cb063' 
+        - '#15793e'
+        - '#004529'
     type: raster
     id: houston-ndvi
     description: Houston NDVI
@@ -48,7 +48,7 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap_name: jet
       rescale:
         - 14300
         - 14830
@@ -58,12 +58,12 @@ layers:
       min: "14300"
       max: "14830"
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - '#000080' 
+        - '#004cff' 
+        - '#29ffce'
+        - '#ceff29'
+        - '#ff6800'
+        - '#800000'
     type: raster
     id: houston-lst-night
     description: Houston lst night 
@@ -81,22 +81,22 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap_name: jet
       rescale:
         - 14600
         - 15300
     name: Houston LST Day
     legend:
       type: gradient
-      min: 14600
-      max: 15300
+      min: "14600"
+      max: "15300"
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - '#000080' 
+        - '#004cff' 
+        - '#29ffce'
+        - '#ceff29'
+        - '#ff6800'
+        - '#800000'
     type: raster
     id: houston-lst-day
     description: Houston lst day light
