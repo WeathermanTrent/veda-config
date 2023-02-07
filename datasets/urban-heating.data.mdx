@@ -22,20 +22,14 @@ layers:
     name: Houston NDVI
     legend:
       type: gradient
-      min: 0
-      max: 1
+      min: "-2000"
+      max: "8500"
       stops:
         - '#ffffe5'
-        - '#f9fdc5'
-        - '#e9f7af'
-        - '#d1ed9f'
-        - '#b1df90'
-        - '#8bce81'
-        - '#64bc6f'
-        - '#3ea75b'
-        - '#288b48'
-        - '#10753c'
-        - '#005e33'
+        - '#e5f5ac'
+        - '#a2d88a'
+        - '#4cb063' 
+        - '#15793e'
         - '#004529'
     type: raster
     id: houston-ndvi
@@ -64,17 +58,11 @@ layers:
       min: "low temp"
       max: "high temp"
       stops:
-        - '#000080'
-        - '#0000e9'
-        - '#003aff'
-        - '#0097ff'
-        - '#0bf3ec'
-        - '#56ffa1'
-        - '#a1ff56'
-        - '#ecff0b'
-        - '#ffad00'
-        - '#ff5700'
-        - '#e90100'
+        - '#000080' 
+        - '#004cff' 
+        - '#29ffce'
+        - '#ceff29'
+        - '#ff6800'
         - '#800000'
     type: raster
     id: houston-lst-night
@@ -100,20 +88,14 @@ layers:
     name: Houston LST Day
     legend:
       type: gradient
-      min: "low temp"
-      max: "high temp"
+      min: "14600"
+      max: "15300"
       stops:
-        - '#000080'
-        - '#0000e9'
-        - '#003aff'
-        - '#0097ff'
-        - '#0bf3ec'
-        - '#56ffa1'
-        - '#a1ff56'
-        - '#ecff0b'
-        - '#ffad00'
-        - '#ff5700'
-        - '#e90100'
+        - '#000080' 
+        - '#004cff' 
+        - '#29ffce'
+        - '#ceff29'
+        - '#ff6800'
         - '#800000'
     type: raster
     id: houston-lst-day
@@ -132,22 +114,60 @@ layers:
   - sourceParams:
       resampling: bilinear
       bidx: 1
-      colormap_name: blues
+      colormap: '{"11":"#486DA2", "12":"#E7EFFC", "21": "#E1CDCE", "22": "#DC9881", "23": "#F10100", "24": "#AB0101",
+              "31":"#B3AFA4", "41":"#6BA966", "42": "#1D6533", "43": "#BDCC93", "51": "#B29C46", "52": "#D1BB82",
+              "71":"#EDECCD", "72":"#D0D181", "73": "#A4CC51", "74": "#82BA9D", "81": "#DDD83E", "82": "#AE7229",
+              "90":"#BBD7ED", "95":"#71A4C1","0":"#00BFFF"}'
+      nodata: -999
       rescale:
         - 0
         - 255
     name: Houston Landcover
     legend:
-      type: gradient
+      type: categorical
       min: "0"
       max: "255"
       stops:
-        - "#f7fbff"
-        - "#d0e1f2"
-        - "#94c4df"
-        - "#4a98c9"
-        - "#1764ab"
-        - "#08306b"
+        - color: "#486DA2"
+          label: "Open Water"
+        - color: "#E7EFFC"
+          label: "Perennial Ice/Snow"
+        - color: "#E1CDCE"
+          label: "Developed, Open Space"
+        - color: "#DC9881"
+          label: "Developed, Low Intensity"
+        - color: "#F10100"
+          label: "Developed, Medium Intensity"
+        - color: "#AB0101"
+          label: "Developed High Intensity"
+        - color: "#B3AFA4"
+          label: "Barren Land (Rock/Sand/Clay)"
+        - color: "#6BA966"
+          label: "Deciduous Forest"
+        - color: "#1D6533"
+          label: "Evergreen Forest"
+        - color: "#BDCC93"
+          label: "Mixed Forest"
+        - color: "#B29C46"
+          label: "Dwarf Scrub"
+        - color: "#D1BB82"
+          label: "Shrub/Scrub"
+        - color: "#EDECCD"
+          label : "Grassland/Herbaceous"
+        - color: "#D0D181"
+          label: "Sedge/Herbaceous"
+        - color: "#A4CC51"
+          label: "Lichens"
+        - color: "#82BA9D"
+          label: "Moss"
+        - color: "#DDD83E"
+          label: "Pasture/Hay"
+        - color: "#AE7229"
+          label: "Cultivated Crops"
+        - color: "#BBD7ED"
+          label: "Woody Wetlands"
+        - color: "#71A4C1"
+          label: "Emergent Herbaceous Wetlands"
     type: raster
     id: houston-landcover
     description: Houston Landcover
