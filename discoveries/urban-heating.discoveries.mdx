@@ -56,11 +56,26 @@ thematics:
 </Block>
 
 
-<Block type='full'>
+<Block>
   <Prose>
     ### Utilizing Land cover maps
     Using land cover maps, the increase of urban and built-up land-cover was measured. It was found that the area of urban and built-up land cover increased by more than 20% in the last two decades. By comparing land cover maps from 2001 and 2019, a substantial increase in urban areas along the southwestern part of the city can be seen (Figure 1 - slide to compare years).  A similar comparison can be done with average temperature. Figure 2 shows Houston’s average temperature from 2000-2009 compared to 2010-2019. The maps show higher average temperatures over similar regions in the southwestern part of the city. These higher temperatures carry into the night, too, although they are less intense.
   </Prose>
+</Block>
+
+<Block>
+    <Figure>
+    <Map
+      datasetId='urban-heating'
+      layerId='houston-ndvi'
+      dateTime='2001-01-01'
+      compareDateTime='2010-01-01'
+      compareLabel='2010/2019'
+    />
+  </Figure>
+</Block>
+
+<Block>
     <Figure>
     <Map
       datasetId='urban-heating'
@@ -75,7 +90,7 @@ thematics:
   </Figure>
 </Block>
 
-<Block t>
+<Block>
   <Figure>
     <Chart
       dataPath={new URL('./harris-lst-svi-2020.csv', import.meta.url).href}
