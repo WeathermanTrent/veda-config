@@ -93,15 +93,15 @@ thematics:
 <Block>
   <Figure>
     <Chart
-      dataPath={new URL('./harris-lst-svi-2019.csv', import.meta.url).href}
-      dateFormat="%B"
+      dataPath={new URL('./harris-lst-svi-2020.csv', import.meta.url).href}
+      dateFormat="%Y-%m-%d"
       idKey='SVI %'
-      xKey='2019 Months'
+      xKey='Date'
       yKey='LST'
-      yAxisLabel='K'
+      yAxisLabel='Kelvin'
     />
     <Caption>
-        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2019)
+        Land surface Temperature (LST) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2020)
     </Caption>
   </Figure>
   <Prose>
@@ -116,14 +116,14 @@ thematics:
   </Prose>
   <Figure>
     <Chart
-      dataPath={new URL('./harris-ndvi-svi-2019.csv', import.meta.url).href}
+      dataPath={new URL('./harris-ndvi-svi-2020.csv', import.meta.url).href}
       dateFormat="%Y-%m-%d"
       idKey='SVI %'
       xKey='Date'
       yKey='NDVI'
     />
     <Caption>
-        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2019)
+        Normalized Difference Vegetation Index (NDVI) trend in various socio-economic (Social Vulnerability Index) ranges in Harris county, Houston (2020)
     </Caption>
   </Figure>
 </Block>
