@@ -44,7 +44,7 @@ thematics:
     </Caption>
   </Figure>
   <Prose>
-    ## Using satellite data to study urban heat
+    ### Using satellite data to study urban heat
 
     Using satellite data and socioeconomic information, a complete picture of Houston’s urban growth can be examined to further understand the impacts of heat stress. To study how the city is changing over time, land cover data from the National Land Cover Database (NLCD) was used. This data classifies land cover types in areas as small as 30m x 30m every 3 years. Greenspace–a dedicated space for vegetation in an urban space, such as a park–also plays a big role in urban heat. To measure vegetation, such as trees and grass, the Normalized Difference Vegetation Index (NDVI) metric is used. On this scale, bare ground = 0 and dense vegetation = 1. This information comes from the NASA Moderate Resolution Imaging Spectroradiometer (MODIS) sensor on the Terra platform.
     
@@ -61,17 +61,7 @@ thematics:
     ### Utilizing Land cover maps
     Using land cover maps, the increase of urban and built-up land-cover was measured. It was found that the area of urban and built-up land cover increased by more than 20% in the last two decades. By comparing land cover maps from 2001 and 2019, a substantial increase in urban areas along the southwestern part of the city can be seen (Figure 1 - slide to compare years).  A similar comparison can be done with average temperature. Figure 2 shows Houston’s average temperature from 2000-2009 compared to 2010-2019. The maps show higher average temperatures over similar regions in the southwestern part of the city. These higher temperatures carry into the night, too, although they are less intense.
   </Prose>
-  <Figure>
-    <Image   
-      src={new URL('./HOUS_LST.jpg', import.meta.url).href}
-      alt='LST average map'
-   />
-    <Caption>     
-      Figure 2. a) Daytime LST average for 2000-2009; b) Daytime LST average for 2010-2019; c) Nighttime LST average for 2000-2009; d) Nighttime LST average for 2010-2019. The black outline is Harris county, most of which is occupied by the city of Houston. 
-    </Caption>
-  </Figure>
 </Block>
-
 
 
 <Block>
@@ -80,8 +70,16 @@ thematics:
       datasetId='urban-heating'
       layerId='houston-lst-day'
       dateTime='2010-01-01'
-      compareDateTime='2010-01-01'
-      compareLabel='2019'
+    />
+  </Figure>
+</Block>
+
+<Block>
+  <Figure>
+    <Map
+      datasetId='urban-heating'
+      layerId='houston-ndvi'
+      dateTime='2010-01-01'
     />
     <Caption>
       We utilized ATSDR SVI to categorize changes in decadal average LST and NDVI as a function of poverty. Our analysis shows that economically disadvantaged populations are subject to higher exposure to urban-enhanced heat stress and, potentially, less access to green spaces.
@@ -105,8 +103,8 @@ thematics:
     </Caption>
   </Figure>
   <Prose>
-    ## What it means for economically disadvantaged population
-    When these changes in heat and land cover were combined with Houston's socioeconomic data, it was found that economically disadvantaged populations are subject to greater heat stress. At the same time, these populations may also face decreased access to greenspaces. In 2020, areas in Harris county with the lowest poverty levels < % were an average of  2°F (1°C) cooler than areas with higher poverty levels [F(4, 1584) = 47.3, p < .001].
+    ### What it means for economically disadvantaged population
+    When these changes in heat and land cover were combined with Houston's socioeconomic data, it was found that economically disadvantaged populations are subject to greater heat stress. At the same time, these populations may also face decreased access to greenspaces. In 2020, areas in Harris county with the lowest poverty levels < 5% were an average of  2°F (1°C) cooler than areas with higher poverty levels [F(4, 1584) = 47.3, p < .001].
   </Prose>
 </Block>
 
