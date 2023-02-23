@@ -214,9 +214,9 @@ layers:
       datasetId: svi-socioeconomic
       layerId: social-vulnerability-index-socioeconomic
       mapLabel: |
-      ::js ({ dateFns, datetime, compareDatetime }) => {
-          return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-      }
+        ::js ({ dateFns, datetime, compareDatetime }) => {
+            return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
+        }
 ---
 <Block>
 <Prose>
