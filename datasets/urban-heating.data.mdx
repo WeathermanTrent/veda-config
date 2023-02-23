@@ -184,25 +184,25 @@ layers:
         ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
         }
-    - sourceParams:
+  - sourceParams:
       resampling: bilinear
       bidx: 1
       colormap_name: jet
       rescale:
-        - -70
-        - 200
+      - -70
+      - 200
     name: Houston LST Diff (Day)
     legend:
       type: gradient
       min: "lower"
       max: "higher"
       stops:
-        - '#000080' 
-        - '#004cff' 
-        - '#29ffce'
-        - '#ceff29'
-        - '#ff6800'
-        - '#800000'
+      - '#000080' 
+      - '#004cff' 
+      - '#29ffce'
+      - '#ceff29'
+      - '#ff6800'
+      - '#800000'
     type: raster
     id: houston-lst-diff
     description: "Changes in decadally averaged land surface temperature (LST, daytime) in the Houston metro area. The higher the value, the larger the increase." 
@@ -214,9 +214,9 @@ layers:
       datasetId: svi-socioeconomic
       layerId: social-vulnerability-index-socioeconomic
       mapLabel: |
-        ::js ({ dateFns, datetime, compareDatetime }) => {
+      ::js ({ dateFns, datetime, compareDatetime }) => {
           return `${dateFns.format(datetime, 'yyyy')} VS ${dateFns.format(compareDatetime, 'yyyy')}`;
-        }
+      }
 ---
 <Block>
 <Prose>
