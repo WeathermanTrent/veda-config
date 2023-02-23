@@ -192,23 +192,23 @@ layers:
       - -70
       - 200
     name: Houston LST Diff (Day)
-    legend:
-      type: gradient
-      min: "lower"
-      max: "higher"
-      stops:
-      - '#000080' 
-      - '#004cff' 
-      - '#29ffce'
-      - '#ceff29'
-      - '#ff6800'
-      - '#800000'
+    # legend:
+    #   type: gradient
+    #   min: "lower"
+    #   max: "higher"
+    #   stops:
+    #   - '#000080' 
+    #   - '#004cff' 
+    #   - '#29ffce'
+    #   - '#ceff29'
+    #   - '#ff6800'
+    #   - '#800000'
     type: raster
     id: houston-lst-diff
     description: "Changes in decadally averaged land surface temperature (LST, daytime) in the Houston metro area. The higher the value, the larger the increase." 
     stacCol: houston-lst-diff
     zoomExtent:
-      - 2
+      - 4
       - 16
     compare:
       datasetId: svi-socioeconomic

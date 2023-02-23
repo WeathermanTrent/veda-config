@@ -1,7 +1,7 @@
 ---
 id: urban-heating
 name: Implications for Heat Stress
-description: "Urban Growth of Houston, Texas over the Last Two Decades"
+description: "A study on urban heat stress in the growing city of Houston, Texas from 2000 - 2020"
 media:
   src: ::file ./urban-heat.jpeg
   alt: Sunset over Tokyo
@@ -13,13 +13,14 @@ thematics:
   - environmental-justice
 ---
 
-<Block type="full">
+<Block type="wide">
   <Figure>
     <Map
       datasetId='urban-heating'
       layerId='houston-lst-diff'
       dateTime='2000-01-01'
       compareDateTime='2018-01-01'
+      compareLabel='decadal LST diff / SVI socioeconomic'
     />
     <Caption>
       Comparison of decadally-averaged temperature difference from 2000-2009 and 2010-2019 with socioeconomic vulnerability from 2018. (Hopefully we can add - Greatest changes in temperature change are in locations with the highest socioeconomic vulnerability.
